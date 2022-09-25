@@ -8,12 +8,26 @@ class NaivBayesKategorisch:
     def __init__(self):
         data = TrainTestSplit.TrainTest.getTrainTestSplit()
         self.XTrain = data[0]
+        print("XTrain: " , self.XTrain)
+        print("-----------------------------------------------")
         self.YTrain = data[1]
+        print("YTrain: " , self.YTrain)
+        print("-----------------------------------------------")
         self.dataRecords = data[2]
+        print("dataRecords: " , self.dataRecords)
+        print("-----------------------------------------------")
         self.iTesting = data[3]
+        print("iTesting: " , self.iTesting)
+        print("-----------------------------------------------")
         self.iTraining = data[4]
+        print("iTraining: " , self.iTraining)
+        print("-----------------------------------------------")
         self.X = data[5]
+        print("X: " , self.X)
+        print("-----------------------------------------------")
         self.Y = data[6]
+        print("Y: " , self.Y)
+        print("-----------------------------------------------")
         self.fit()
 
     # train the model
@@ -31,11 +45,11 @@ class NaivBayesKategorisch:
         PI[1] = np.sum(self.YTrain)
         PI[0] = self.dataRecords - PI[1]
         P = np.zeros_like(PI)
-        allofthem = np.arange(self.XTrain.shape[1])
+        allOfThem = np.arange(self.XTrain.shape[1])
         for i in range(len(PI)):
-            P[i] = np.prod(self.PXI[i, allofthem, x]) * PI[i]
-        choosenClass = np.argmax(P)
-        return choosenClass
+            P[i] = np.prod(self.PXI[i, allOfThem, x]) * PI[i]
+        chosenClass = np.argmax(P)
+        return chosenClass
 
     # score my model
     def score(self):
@@ -50,7 +64,7 @@ class NaivBayesKategorisch:
             else:
                 incorrect[klasse] = incorrect[klasse] + 1
         print(
-            f"Von {XTest.shape[0]} Testfällen wurden {int(np.sum(correct))} richtig und {int(np.sum(incorrect))} falsch klassifiziert")
+            f"Of {XTest.shape[0]} Testcases, {int(np.sum(correct))} have been classified right and {int(np.sum(incorrect))} have been classified wrong.")
 
 
 test = NaivBayesKategorisch()
