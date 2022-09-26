@@ -1,0 +1,15 @@
+1. Zuerst wurden die Daten mittels pandas importiert
+
+2. Für X wurden danach von allen Zeilen jeweils die Spalten 1-100 gewählt. Spalte 0 ist der Dateiname
+und Spalte 101 ist das Label.
+
+3. Für Y wurde von allen Zeilen jeweils die Spalte 101 gewählt. (Label)
+
+4. Danach wurde mit dem MLPClassifier experimentiert. Ohne automatisiertes Testen der Parameter
+(z.B mit Loops) wurde eine maximale Genauigkeit von 93% erreicht. Dies könnte bestimmt noch um einige wenige
+Prozent optimiert werden.
+
+5. Zusätzlich wurde ein eigens gemaltes Bild neu eingelesen und in ein Pixelarray transformiert. Es wurde
+zusätzlich normalisiert, damit nur 0 für Schwarz und 1 für Weiss vorkommen.
+
+6. Das neue Bild wurde mit mlp.predict() überprüft und korrekt erkannt.
