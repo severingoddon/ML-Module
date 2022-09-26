@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/PVA1/singleImage.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/PVA1/symbole.csv">
           <value>
             <Attribute>
@@ -11,6 +18,27 @@
           </value>
         </entry>
         <entry key="/PVA2/diagnosis.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/PVA4/Autoklassifizierung.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/PVA4/VereinigteBilddaten.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/PVA4/symbole.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

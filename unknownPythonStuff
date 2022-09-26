@@ -1,0 +1,44 @@
+@ Operator = Matrizenmultiplikation
+
+Arrays erstellen:
+empty(shape) Liefert ein nicht-initialisiertes Array zurück.
+ones(shape) Liefert ein mit Einsen initialisiertes Array zurück.
+zeros(shape) Liefert ein mit Nullen initialisiertes Array zurück.
+full(shape, fill_value) Liefert ein mit dem Wert fill_value initialisiertes Array zurück.
+identity(n) Liefert das Identitäts-Array mit der Kantenlänge n zurück.
+eye(N,M,k]) Liefert ein 2D-Array der Größe M×N zurück, mit Einsen auf der Haupt- diagonalen bzw. der um k verschobenen Nebendiagonalen.
+random.rand Liefert ein Array von über [0,1] gleichverteilten Zufallszahlen zurück.
+array(object) Erzeugt ein neues Array aus vorhanden Daten von object.
+For personal use only.
+ => Der Parameter shape gibt dabei immer die gewünschte Dimension der Matrix an
+
+Vektor erstellen:
+np.arange(0,6,2)
+array([0, 2, 4])
+
+Matrizen formatieren:
+A=np.arange(12).reshape(4,3) => formatiert den Vektor der Länge 12 in eine Matrix der Dimension 4 X 3 um.
+
+Einzelne Positionen in Matrizen verändern:
+A[0,0]=-1 => verändert Position 0,0 zu -1
+
+Array slicing:
+A = ([
+       [-1, 1, 2],
+       [ 3, 4, 5],
+       [ 6, 7, 8],
+       [9, 10, 11]
+])
+B=A[2:4,0:2]
+B = ([
+       [ 6, 7],
+       [ 9, 10]
+])
+=> Start ist inklusive, Ende ist exklusive!
+C=A[:,1:3]  => Wird kein Start-Index angegeben, ist Null gemeint. Fehlt der Endindex, ist der größte Index-Wert der Matrix gemeint.
+C = ([
+       [ 1, 2],
+       [ 4, 5],
+       [ 7, 8],
+       [-1, 11]
+])
