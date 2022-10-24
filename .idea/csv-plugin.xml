@@ -38,7 +38,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="/PVA4/symbole.csv">
+        <entry key="/PVA6/daten.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/PVA6/sales.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
