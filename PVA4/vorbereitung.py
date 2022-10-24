@@ -19,7 +19,6 @@ Dw = np.zeros(3)  # --> [0. 0. 0.]
 w = np.random.rand(3) - 0.5 # randomly initialize the weights
 convergenz = 1
 
-
 # activation function
 def myHeaviside(x):
     y = np.ones_like(x,dtype=float) # returns an array of same shape like x
@@ -39,7 +38,6 @@ while (convergenz > 0) and (t<tmax):
         Dw[j]= eta*error*xB[j]
         w[j] = w[j] + Dw[j] # adjust the weights
     convergenz = np.linalg.norm(y-myHeaviside(w@x.T))
-
 
 def predict(x,w,xMin,xMax):
     xC = np.ones( (x.shape[0],3) )
